@@ -1,14 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Game from './components/Game';
+import JoinPage from './pages/JoinPage';
+import GamePage from './pages/GamePage';
 
 import './App.css';
 
 function App() {
     return (
-        <div>
-            <Game />
-        </div>
+        <Router>
+            <Route path="/" exact component={JoinPage}  />
+            <Route path="/game" component={GamePage}  />
+        </Router>
     );
 }
 
