@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-import './JoinPage.css'
+import './JoinPage.css';
 
 const JoinPage = () => {
     const [username, setUsername] = useState('');
-    const [room, setRoom] = useState('');
+    const [room, setRoom] = useState(''); // Every single game is room
+    // TODO: get active rooms to display and to check if a roomname is already in use
 
     return (
         <div className="container">
