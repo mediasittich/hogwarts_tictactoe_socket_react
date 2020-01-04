@@ -18,12 +18,17 @@ const JoinPage = () => {
                     <input
                         type="text"
                         placeholder="Username"
+                        onChange={(event) => {setUsername(event.target.value)}}
                     />
                     <input
                         type="text"
                         placeholder="Game ID"
+                        onChange={(event) => {setRoom(event.target.value)}}
                     />
-                    <Link>Join Game</Link>
+                    <Link
+                        onClick={(event) => (!username || !room) ? event.preventDefault() : null}
+                        to={`/game?username=${username}&room=${room}`}
+                    >Join Game</Link>
                 </form>
             </div>
             <div className="overlay-container">
